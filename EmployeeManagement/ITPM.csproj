@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4E566C8-B786-400E-A6D1-3C09DA2B46C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VehicleManagement</RootNamespace>
+    <AssemblyName>VehicleManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMajorRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMajorRepair.designer.cs">
+      <DependentUpon>AddMajorRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMinorRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMinorRepair.designer.cs">
+      <DependentUpon>AddMinorRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking1.designer.cs">
+      <DependentUpon>booking1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking2.designer.cs">
+      <DependentUpon>booking2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking3.designer.cs">
+      <DependentUpon>booking3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking4.designer.cs">
+      <DependentUpon>booking4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking5.designer.cs">
+      <DependentUpon>booking5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking6.designer.cs">
+      <DependentUpon>booking6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking7.designer.cs">
+      <DependentUpon>booking7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booking8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking8.designer.cs">
+      <DependentUpon>booking8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerhome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerhome.designer.cs">
+      <DependentUpon>customerhome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customerregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customerregister.designer.cs">
+      <DependentUpon>Customerregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpDt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpDt.designer.cs">
+      <DependentUpon>CustomerUpDt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete.designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMajorRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMajorRepair.designer.cs">
+      <DependentUpon>DeleteMajorRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteService.designer.cs">
+      <DependentUpon>DeleteService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTireChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTireChange.designer.cs">
+      <DependentUpon>DeleteTireChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm1.designer.cs">
+      <DependentUpon>EAMForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm10.designer.cs">
+      <DependentUpon>EAMForm10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm11.designer.cs">
+      <DependentUpon>EAMForm11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm12.designer.cs">
+      <DependentUpon>EAMForm12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm13.designer.cs">
+      <DependentUpon>EAMForm13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm14.designer.cs">
+      <DependentUpon>EAMForm14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm15.designer.cs">
+      <DependentUpon>EAMForm15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm16.designer.cs">
+      <DependentUpon>EAMForm16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm2.designer.cs">
+      <DependentUpon>EAMForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm3.designer.cs">
+      <DependentUpon>EAMForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm4.designer.cs">
+      <DependentUpon>EAMForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm7.designer.cs">
+      <DependentUpon>EAMForm7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm8.designer.cs">
+      <DependentUpon>EAMForm8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EAMForm9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EAMForm9.designer.cs">
+      <DependentUpon>EAMForm9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit.designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeMain.designer.cs">
+      <DependentUpon>EmployeeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeRegistration.designer.cs">
+      <DependentUpon>EmployeeRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdateDelete.designer.cs">
+      <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage2.designer.cs">
+      <DependentUpon>Homepage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertDriver.designer.cs">
+      <DependentUpon>InsertDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorRepairReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorRepairReport.designer.cs">
+      <DependentUpon>MajorRepairReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorRepairReportUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorRepairReportUpdate.designer.cs">
+      <DependentUpon>MajorRepairReportUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorRepairUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorRepairUpdate.designer.cs">
+      <DependentUpon>MajorRepairUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagagement4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagagement4.designer.cs">
+      <DependentUpon>ProfitManagagement4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement1.designer.cs">
+      <DependentUpon>ProfitManagement1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement10.designer.cs">
+      <DependentUpon>ProfitManagement10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement11.designer.cs">
+      <DependentUpon>ProfitManagement11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement12.designer.cs">
+      <DependentUpon>ProfitManagement12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement13.designer.cs">
+      <DependentUpon>ProfitManagement13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement14.designer.cs">
+      <DependentUpon>ProfitManagement14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement15.designer.cs">
+      <DependentUpon>ProfitManagement15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement16.designer.cs">
+      <DependentUpon>ProfitManagement16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement17.designer.cs">
+      <DependentUpon>ProfitManagement17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement18.designer.cs">
+      <DependentUpon>ProfitManagement18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement19.designer.cs">
+      <DependentUpon>ProfitManagement19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement2.designer.cs">
+      <DependentUpon>ProfitManagement2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement20.designer.cs">
+      <DependentUpon>ProfitManagement20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement21.designer.cs">
+      <DependentUpon>ProfitManagement21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement22.designer.cs">
+      <DependentUpon>ProfitManagement22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement33.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement33.designer.cs">
+      <DependentUpon>ProfitManagement33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement5.designer.cs">
+      <DependentUpon>ProfitManagement5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement6.designer.cs">
+      <DependentUpon>ProfitManagement6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement7.designer.cs">
+      <DependentUpon>ProfitManagement7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement8.designer.cs">
+      <DependentUpon>ProfitManagement8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitManagement9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitManagement9.designer.cs">
+      <DependentUpon>ProfitManagement9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepairCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairCategory.designer.cs">
+      <DependentUpon>RepairCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEmployee.designer.cs">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchVehicleR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVehicleR.designer.cs">
+      <DependentUpon>SearchVehicleR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceReport.designer.cs">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceReportUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceReportUpdate.designer.cs">
+      <DependentUpon>ServiceReportUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceUpdate.designer.cs">
+      <DependentUpon>ServiceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show.designer.cs">
+      <DependentUpon>show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TireChangeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TireChangeReport.designer.cs">
+      <DependentUpon>TireChangeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TireChangeReportUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TireChangeReportUpdate.designer.cs">
+      <DependentUpon>TireChangeReportUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TireChangeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TireChangeUpdate.designer.cs">
+      <DependentUpon>TireChangeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleMain.Designer.cs">
+      <DependentUpon>VehicleMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleUpdateDelete.Designer.cs">
+      <DependentUpon>VehicleUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleRegistration.Designer.cs">
+      <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVehicle.Designer.cs">
+      <DependentUpon>SearchVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRepairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRepairs.designer.cs">
+      <DependentUpon>ViewRepairs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMajorRepair.resx">
+      <DependentUpon>AddMajorRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMinorRepair.resx">
+      <DependentUpon>AddMinorRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking1.resx">
+      <DependentUpon>booking1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking2.resx">
+      <DependentUpon>booking2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking3.resx">
+      <DependentUpon>booking3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking4.resx">
+      <DependentUpon>booking4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking5.resx">
+      <DependentUpon>booking5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking6.resx">
+      <DependentUpon>booking6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking7.resx">
+      <DependentUpon>booking7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking8.resx">
+      <DependentUpon>booking8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerhome.resx">
+      <DependentUpon>customerhome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customerregister.resx">
+      <DependentUpon>Customerregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUpDt.resx">
+      <DependentUpon>CustomerUpDt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMajorRepair.resx">
+      <DependentUpon>DeleteMajorRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteService.resx">
+      <DependentUpon>DeleteService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTireChange.resx">
+      <DependentUpon>DeleteTireChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm1.resx">
+      <DependentUpon>EAMForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm10.resx">
+      <DependentUpon>EAMForm10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm11.resx">
+      <DependentUpon>EAMForm11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm12.resx">
+      <DependentUpon>EAMForm12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm13.resx">
+      <DependentUpon>EAMForm13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm14.resx">
+      <DependentUpon>EAMForm14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm15.resx">
+      <DependentUpon>EAMForm15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm16.resx">
+      <DependentUpon>EAMForm16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm2.resx">
+      <DependentUpon>EAMForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm3.resx">
+      <DependentUpon>EAMForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm4.resx">
+      <DependentUpon>EAMForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm7.resx">
+      <DependentUpon>EAMForm7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm8.resx">
+      <DependentUpon>EAMForm8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EAMForm9.resx">
+      <DependentUpon>EAMForm9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeMain.resx">
+      <DependentUpon>EmployeeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeRegistration.resx">
+      <DependentUpon>EmployeeRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUpdateDelete.resx">
+      <DependentUpon>EmployeeUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage2.resx">
+      <DependentUpon>Homepage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertDriver.resx">
+      <DependentUpon>InsertDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorRepairReport.resx">
+      <DependentUpon>MajorRepairReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorRepairReportUpdate.resx">
+      <DependentUpon>MajorRepairReportUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorRepairUpdate.resx">
+      <DependentUpon>MajorRepairUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagagement4.resx">
+      <DependentUpon>ProfitManagagement4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement1.resx">
+      <DependentUpon>ProfitManagement1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement10.resx">
+      <DependentUpon>ProfitManagement10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement11.resx">
+      <DependentUpon>ProfitManagement11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement12.resx">
+      <DependentUpon>ProfitManagement12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement13.resx">
+      <DependentUpon>ProfitManagement13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement14.resx">
+      <DependentUpon>ProfitManagement14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement15.resx">
+      <DependentUpon>ProfitManagement15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement16.resx">
+      <DependentUpon>ProfitManagement16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement17.resx">
+      <DependentUpon>ProfitManagement17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement18.resx">
+      <DependentUpon>ProfitManagement18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement19.resx">
+      <DependentUpon>ProfitManagement19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement2.resx">
+      <DependentUpon>ProfitManagement2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement20.resx">
+      <DependentUpon>ProfitManagement20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement21.resx">
+      <DependentUpon>ProfitManagement21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement22.resx">
+      <DependentUpon>ProfitManagement22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement33.resx">
+      <DependentUpon>ProfitManagement33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement5.resx">
+      <DependentUpon>ProfitManagement5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement6.resx">
+      <DependentUpon>ProfitManagement6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement7.resx">
+      <DependentUpon>ProfitManagement7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement8.resx">
+      <DependentUpon>ProfitManagement8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitManagement9.resx">
+      <DependentUpon>ProfitManagement9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairCategory.resx">
+      <DependentUpon>RepairCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEmployee.resx">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchVehicleR.resx">
+      <DependentUpon>SearchVehicleR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceReport.resx">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceReportUpdate.resx">
+      <DependentUpon>ServiceReportUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceUpdate.resx">
+      <DependentUpon>ServiceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show.resx">
+      <DependentUpon>show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TireChangeReport.resx">
+      <DependentUpon>TireChangeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TireChangeReportUpdate.resx">
+      <DependentUpon>TireChangeReportUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TireChangeUpdate.resx">
+      <DependentUpon>TireChangeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleMain.resx">
+      <DependentUpon>VehicleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUpdateDelete.resx">
+      <DependentUpon>VehicleUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleRegistration.resx">
+      <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchVehicle.resx">
+      <DependentUpon>SearchVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRepairs.resx">
+      <DependentUpon>ViewRepairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmartCarRental_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminPhoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\backButton.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
