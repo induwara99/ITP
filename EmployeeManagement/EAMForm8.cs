@@ -66,6 +66,7 @@ namespace VehicleManagement
 
             cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
+           
             dr = cmd.ExecuteReader();
 
             while (dr.Read())

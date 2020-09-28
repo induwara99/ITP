@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 namespace VehicleManagement
 {
     public partial class ProfitManagement21 : Form
-    {     
+    {
         //ESTABLISH THE CONNECTION
         SqlConnection con = new SqlConnection("Data Source=ROG;Initial Catalog=VehicleDB;Integrated Security=True;Pooling=False");
         SqlCommand cmd;
@@ -22,8 +22,8 @@ namespace VehicleManagement
 
 
         int TotalSalary;
-        public String Year1;
-        public String Year2;
+        //public DateTime Year1;
+        //public DateTime Year2;
 
         public static String totalsalary;
         public static String totaltrips;
@@ -33,9 +33,9 @@ namespace VehicleManagement
         public ProfitManagement21()
         {
             InitializeComponent();
-            
 
-           
+
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -46,22 +46,22 @@ namespace VehicleManagement
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f1 = new Form2();
+            Form1 f1 = new Form1();
             f1.Show();
         }
 
         private void ProfitManagement21_Load(object sender, EventArgs e)
         {
 
-            Year1 = ProfitManagement20.year.ToString()+"-01";
-            Year2 = ProfitManagement20.year.ToString() + "-31";
+            //Year1 = DateTime.Parse(ProfitManagement20.year.ToString()+"-01");
+            //Year2 = DateTime.Parse(ProfitManagement20.year.ToString() + "-31");
             //where date between @Year1 and @Year2
             con.Open();
-            String sql = "select sum(salary_for_employees), sum(amount_for_trips), sum(amount_for_repaires), sum(amount_for_fuel) from PROFIT where date between 2020-09-01 and 2020-09-30";
+            String sql = "select sum(salary_for_employees), sum(amount_for_trips), sum(amount_for_repaires), sum(amount_for_fuel) from PROFIT";
             cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
-           // cmd.Parameters.AddWithValue("@Year1", Year1);
-            //cmd.Parameters.AddWithValue("@Year2", Year2);
+            //cmd.Parameters.AddWithValue("@Year1", "2020-09-01");
+            //cmd.Parameters.AddWithValue("@Year2", "2020-09-31");
             dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -73,17 +73,43 @@ namespace VehicleManagement
                 texttotalrepaires.Text = dr[2].ToString();
                 texttotalfuel.Text = dr[3].ToString();
 
-           
+
 
             }
 
-            totalsalary = (dr[0].ToString());
-           
+
+
 
 
 
             con.Close();
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            totalsalary = texttotalsalary.Text;
+            totaltrips = texttotaltrips.Text;
+            totalrepaires = texttotalrepaires.Text;
+            totalfuel = texttotalfuel.Text;
+
+            ProfitManagement22 p22 = new ProfitManagement22();
+            p22.Show();
+
+
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            totalsalary = texttotalsalary.Text;
+            totaltrips = texttotaltrips.Text;
+            totalrepaires = texttotalrepaires.Text;
+            totalfuel = texttotalfuel.Text;
+
+            ProfitManagement22 p22 = new ProfitManagement22();
+            p22.Show();
         }
     }
 }
